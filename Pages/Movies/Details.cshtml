@@ -1,0 +1,41 @@
+@page "{id:int}"
+@model RazorPagesMovie.Pages_Movies.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div class="flex flex-col min-w-64 items-center">
+
+    <h1 class="mx-autod p-2 font-bold text-2xl text-center">Details</h1>
+
+    <div class="w-full flex flex-col max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <a href="#">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> @Html.DisplayFor(model => model.Movie.Title)</h5>
+        </a>
+
+            <p class="ml-5 mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <span class="font-boldd text-white">@Html.DisplayNameFor(model => model.Movie.ReleaseDate):</span>
+                @Html.DisplayFor(model => model.Movie.ReleaseDate)
+            </p>
+            <p class="mb-3 ml-5 font-normal text-gray-700 dark:text-gray-400">
+                <span class="font-boldd text-white">@Html.DisplayNameFor(model => model.Movie.Genre):</span>
+                @Html.DisplayFor(model => model.Movie.Genre)
+            </p>
+            <p class="mb-3 ml-5 font-normal text-gray-700 dark:text-gray-400">
+                <span class="font-boldd text-white">@Html.DisplayNameFor(model => model.Movie.Price):</span>
+                @Html.DisplayFor(model => model.Movie.Price)
+            </p>
+        
+        <a class="text-white  hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center bg-green-600  " asp-page="./Edit" asp-route-id="@Model.Movie.Id">Edit</a>
+    </div>
+
+
+    <a asp-page="./Index" class="flex justify-center hover:underline items-center gap-x-1 mt-24 w-fit  text-black rounded px-2.5 py-2 mx-auto"> 
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="128" height="128" viewBox="0 0 24 24"><path fill="currentColor" d="m4 10l-.707.707L2.586 10l.707-.707zm17 8a1 1 0 1 1-2 0zM8.293 15.707l-5-5l1.414-1.414l5 5zm-5-6.414l5-5l1.414 1.414l-5 5zM4 9h10v2H4zm17 7v2h-2v-2zm-7-7a7 7 0 0 1 7 7h-2a5 5 0 0 0-5-5z"/></svg>
+    Back to List
+</a>
+</div>
+
+

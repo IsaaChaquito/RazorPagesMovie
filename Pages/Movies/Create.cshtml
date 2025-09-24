@@ -1,0 +1,49 @@
+@page
+@model RazorPagesMovie.Pages_Movies.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        
+
+    <h1 class="mx-autod p-2 font-bold text-2xl text-center">Movie Form</h1>
+
+<form  method="post" class="max-w-sm mx-auto">
+    <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm font-bold"></div>
+  <div class="mb-5">
+    <label asp-for="Movie.Title" class="block mb-2 text-sm font-medium text-gray-900 ">Title</label>
+    <input asp-for="Movie.Title" class="bg-gray-50 border border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-sm rounded-lg   block w-full p-2.5 "  required />
+    <span asp-validation-for="Movie.Title" class="text-red-500 text-xs font-bold"></span>
+  </div>
+
+  <div class="mb-5">
+    <label asp-for="Movie.ReleaseDate" class="block mb-2 text-sm font-medium text-gray-900 ">Release Date</label>
+    <input asp-for="Movie.ReleaseDate" class="bg-gray-50 border border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-sm rounded-lg   block w-full p-2.5 " required />
+    <span asp-validation-for="Movie.Title" class="text-red-500 text-xs font-bold"></span>
+  </div>
+
+  <div class="mb-5">
+    <label asp-for="Movie.Genre"  class="block mb-2 text-sm font-medium text-gray-900 ">Genre</label>
+    <input asp-for="Movie.Genre" class="bg-gray-50 border border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-sm rounded-lg   block w-full p-2.5 " required />
+    <span asp-validation-for="Movie.Genre" class="text-red-500 text-xs font-bold"></span>
+  </div>
+
+    <div class="mb-5">
+        <label asp-for="Movie.Price" class="block mb-2 text-sm font-medium text-gray-900 ">Price ($)</label>
+        <input asp-for="Movie.Price" class="bg-gray-50 border border-gray-300 focus:border-blue-500 outline-none text-gray-900 text-sm rounded-lg   block w-full p-2.5 " required />
+        <span asp-validation-for="Movie.Price" class="text-red-500 text-xs font-bold"></span>
+    </div>
+
+  <button type="submit" value="Create" class="text-white  hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full  px-5 py-2.5 text-center bg-blue-600 dark:hover:bg-blue-700 ">Add</button>
+</form>
+
+
+<a asp-page="./Index" class="flex justify-center hover:underline items-center gap-x-1 mt-24 w-fit  text-black rounded px-2.5 py-2 mx-auto"> 
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="128" height="128" viewBox="0 0 24 24"><path fill="currentColor" d="m4 10l-.707.707L2.586 10l.707-.707zm17 8a1 1 0 1 1-2 0zM8.293 15.707l-5-5l1.414-1.414l5 5zm-5-6.414l5-5l1.414 1.414l-5 5zM4 9h10v2H4zm17 7v2h-2v-2zm-7-7a7 7 0 0 1 7 7h-2a5 5 0 0 0-5-5z"/></svg>
+    Back to List
+</a>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
