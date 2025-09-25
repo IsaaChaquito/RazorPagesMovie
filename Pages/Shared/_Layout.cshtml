@@ -1,5 +1,6 @@
 ﻿@{
-    var currentPage = ViewContext.RouteData.Values["page"]?.ToString();
+    var route = ViewContext.RouteData.Values["page"]?.ToString()?.Split('/');
+    var currentPage = route?[1]; 
 }
 
 <!DOCTYPE html>
@@ -9,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Movie</title>
     <script type="importmap"></script>
-    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
 </head>
@@ -17,18 +17,17 @@
     <header>
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            
 
             <div class=" w-full block" id="navbar-default">
             <ul class="font-medium border-gray-100 rounded-lg  flex space-x-8 rtl:space-x-reverse mt-0 border-0 bg-white dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                    <a class="@(currentPage == "/Index" ? " text-blue-400 " : " text-white ") block py-2 px-3  rounded-sm bg-transparent  p-0  " asp-area="" asp-page="/Index">Home</a>
+                    <a class="@(currentPage == "Index" ? " text-blue-400 " : " text-white ") block py-2 px-3  rounded-sm bg-transparent  p-0  " asp-area="" asp-page="/Index">Home</a>
                 </li>
                 <li>
-                    <a  class="@(currentPage == "/Movies/Index" ? " text-blue-400 " : " text-white ") block py-2 px-3  rounded-sm bg-transparent  p-0  " asp-area="" asp-page="/Movies/Index">Movies</a>
+                    <a  class="@(currentPage == "Movies" ? " text-blue-400 " : " text-white ") block py-2 px-3  rounded-sm bg-transparent  p-0  " asp-area="" asp-page="/Movies/Index">Movies</a>
                 </li>
                 <li>
-                    <a  class="@(currentPage == "/Privacy" ? "text-blue-400" : "text-white") block py-2 px-3  rounded-sm bg-transparent  p-0  " asp-area="" asp-page="/Privacy">Privacy</a>
+                    <a  class="@(currentPage == "Privacy" ? "text-blue-400" : "text-white") block py-2 px-3  rounded-sm bg-transparent  p-0  " asp-area="" asp-page="/Privacy">Privacy</a>
                 </li>
             </ul>
             </div>
