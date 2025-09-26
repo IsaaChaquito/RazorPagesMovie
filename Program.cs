@@ -17,7 +17,13 @@ if (builder.Environment.IsDevelopment())
 else
 {
     builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionMovieContext")));
+        options.UseSqlServer(builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING")));
+        
+    builder.Services.AddStackExchangeRedisCache(options =>
+    {
+    options.Configuration = builder.Configuration["AZURE_REDIS_CONNECTIONSTRING"];
+    options.InstanceName = "SampleInstance";
+    });
 }
 
 
