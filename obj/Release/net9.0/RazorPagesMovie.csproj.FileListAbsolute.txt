@@ -1,0 +1,10 @@
+D:\Dev\Framework projects\.NET\RazorPagesMovie\obj\Release\net9.0\RazorPagesMovie.csproj.AssemblyReference.cache
+D:\Dev\Framework projects\.NET\RazorPagesMovie\obj\Release\net9.0\rpswa.dswa.cache.json
+D:\Dev\Framework projects\.NET\RazorPagesMovie\obj\Release\net9.0\RazorPagesMovie.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\Framework projects\.NET\RazorPagesMovie\obj\Release\net9.0\RazorPagesMovie.AssemblyInfoInputs.cache
+D:\Dev\Framework projects\.NET\RazorPagesMovie\obj\Release\net9.0\RazorPagesMovie.AssemblyInfo.cs
+D:\Dev\Framework projects\.NET\RazorPagesMovie\obj\Release\net9.0\RazorPagesMovie.csproj.CoreCompileInputs.cache
+D:\Dev\Framework projects\.NET\RazorPagesMovie\obj\Release\net9.0\RazorPagesMovie.MvcApplicationPartsAssemblyInfo.cache
+D:\Dev\Framework projects\.NET\RazorPagesMovie\obj\Release\net9.0\RazorPagesMovie.RazorAssemblyInfo.cache
+D:\Dev\Framework projects\.NET\RazorPagesMovie\obj\Release\net9.0\RazorPagesMovie.RazorAssemblyInfo.cs
+D:\Dev\Framework projects\.NET\RazorPagesMovie\obj\Release\net9.0\RazorPagesMovie.sourcelink.json
